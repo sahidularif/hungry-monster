@@ -1,0 +1,42 @@
+.body{
+    margin: 0 auto;
+}
+#search{
+    width: 50%;
+    margin: 100px auto;
+}
+#search input[type="text"]{
+    height: 60px;
+}
+
+.meal-img img{
+    width: 100%;
+}
+#error-msg{
+    color: olive;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+#parent-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    
+}
+#meal-details{
+    
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    
+    border-radius: 10px;
+}
+.meal-name{
+    height: 150px;
+    text-align: center;
+    padding: 20px;
+}
