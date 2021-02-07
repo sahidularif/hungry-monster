@@ -21,8 +21,7 @@
 #parent-div{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-    
+    grid-gap: 30px;    
 }
 #meal-details{
     
@@ -31,12 +30,60 @@
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
-    
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);    
     border-radius: 10px;
 }
 .meal-name{
     height: 150px;
     text-align: center;
     padding: 20px;
+}
+#navbar{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#nav ul {
+    display: flex;
+}
+#nav ul li{
+   
+    list-style-type: none;
+    margin-right: 20px;
+    color: black;
+}
+#nav ul li a{
+   
+   text-decoration: none;
+   color: olivedrab;
+   font-weight: bold;
+}
+#display-meal-details{
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color:thistle;
+    margin-bottom: 100px;   
+    position: relative;
+
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+}
+.meal-name{
+    text-align: left;
+    height: 100%;       
+    display: block; 
+}
+#display-meal-details img{
+    border-radius: 20px;
+}
+#meal-img img{
+    width: 100%;
+}
+.meal-name ul li{
+    list-style-type: none;
 }
