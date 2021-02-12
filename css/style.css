@@ -1,6 +1,4 @@
-.body{
-    margin: 0 auto;
-}
+
 #search{
     width: 40%;
     margin: 100px auto;
@@ -14,6 +12,9 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius:  30px;
     border:1px solid orangered;    
+}
+#logo{
+    margin-top: 5px;
 }
 #meal-img{
     height: auto;
@@ -63,6 +64,7 @@
 
 #nav ul {
     display: flex;
+    margin-top: 20px;
 }
 #nav ul li{   
     list-style-type: none;
@@ -70,7 +72,7 @@
 }
 #nav ul li a{   
    text-decoration: none;
-   color: orangered;
+   color:olive;
    font-weight: bold;
 }
 #display-meal-details{
