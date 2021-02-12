@@ -1,11 +1,12 @@
 
 // Themealdb API & Input Value
-const NameApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+const nameApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const letterApi = 'https://www.themealdb.com/api/json/v1/1/search.php?f=';
 const idApi = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
 // Search Meal Result..
 function searchMealItem() {
+    // User input keyword
     const searchKeyword = document.getElementById("search-keyword").value;
     
     if (searchKeyword !== '') {
@@ -16,7 +17,7 @@ function searchMealItem() {
            searchMeal(url);
         }
         else{
-            let url = `${NameApi}${searchKeyword}`;
+            let url = `${nameApi}${searchKeyword}`;
             searchMeal(url);
         }
 
@@ -34,7 +35,8 @@ function searchMealItem() {
 
 const displayMealDetails = idMeal => {
     let displayMealDetails = document.getElementById("display-meal-details").innerHTML = "";
-    fetch(`${idApi}${idMeal}`)
+    const url = `${idApi}${idMeal}`;
+    fetch(url)
         .then(response => response.json())
         .then(data => showMealRecipe(data.meals));
 }
@@ -48,7 +50,7 @@ function showMealRecipe(meal) {
     for (let i = 1; i <= 20; i++) {
         if (meal[`strIngredient${i}`]) {
             ingredients.push(
-                `${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`
+                `${meal[`strMeasure${i}`]} - ${meal[`strIngredient${i}`]}`
             );
         } 
         else {
@@ -94,6 +96,7 @@ function searchMeal(url) {
 
                 let parentDiv = document.getElementById("parent-div");
                 const mealItem = document.createElement('div');
+                mealItem.className = 'meal-container';
                 let mealInfo = `            
                         <div onclick="displayMealDetails('${meal.idMeal}')" id="meal-details" >
                        
